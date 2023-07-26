@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/css/style.css">
+    <title>Empleados</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Area de empleados</h1>
+        <div class="options">
+            <div class="option" onclick="mostOpt1()"><h2>Ver lista productos</h2></div>
+            <div class="option" onclick="mostOpt2()"><h2>Vender productos</h2></div>
+        </div>
+        <a href="/index.html" class="return">Volver</a>
+    </div>
+    <div class="container_3">
+        <iframe src="/src/pages/iframesPages/listaProductos.html" id="op1" height="100%" width="90%" style="display: block;"></iframe>
+        <iframe src="/src/pages/iframesPages/venderProductos.html" id="op2" height="100%" width="90%" style="display: none;"></iframe>
+    </div>
+    <script>
+        function mostOpt1(){
+            document.getElementById('op1').style.display = 'block';
+            document.getElementById('op2').style.display = 'none';
+        }
+        
+        function mostOpt2(){
+            document.getElementById('op1').style.display = 'none';
+            document.getElementById('op2').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
